@@ -1,0 +1,49 @@
+﻿
+
+<section class="testimonials">
+
+<h1>Testimonials</h1>
+
+@foreach (var testimonial in testimonials)
+{
+    <div>
+        <p>@testimonial.Comments</p>
+        <h3>@testimonial.Author</h3>
+        <i></i>
+    </div>  
+
+}
+
+</section>
+
+
+@code { 
+    
+    AngelalgoTestimonials[] testimonials;
+
+    public class AngelalgoTestimonials
+    {
+        public string Comments { get; set; }
+
+        public string Author { get; set; }
+    }
+
+    private static readonly string[] comments = new[]
+    {
+        "Angel Algo is super helpful for my trading!! I like how chart looks and signals are very nicely placed. Angel Algo’s discord has many useful information. Also alert is coming through soon as market opens and alert us keep coming every 15-30 minutes until market close!! On top of that wonderful customer service and you can request alert for the ticker you’d like to trade. Worth every $$$!!"
+        "This algo has progressed my trading by applying supply and demand zones/lines. These zones/line and buy and sell signals has helped me confirm my own technical analysis. Thanks angel algo!",
+        "This by far has to be the best Algo I have used. I started with $3.2k a month ago and am now at $6K. This program and team has helped me achieve more than I could have imagined. Thank you Angel Algo!",
+        "This Algo has help tremendously with my trading as a day trader this helps me reassure my position on the lager timeframes. Also, using the Algo has helped me with seeing the strong buys and strong sells.",
+        "Indicators are very good. I’ve been using it for a while. I made very profitable trades. I recommend you to use it. You won’t find any better than these on Tradingview. I tried many indicators. Success rates were low. Angel Indicators has an above average algorithm. High success rate of transactions."
+    };
+
+    private static readonly string[] author = new[]
+    {
+        "Cory Neimeister",
+        "Briam Kim",
+        "Connor Sid",
+        "Kelcy Perkins",
+        "Abdurrahman AY"
+    };
+
+}

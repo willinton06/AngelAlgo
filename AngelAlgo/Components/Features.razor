@@ -1,0 +1,47 @@
+﻿@page "/features"
+
+
+<section class="features">
+
+<h1>Features</h1>
+    
+@foreach (var feature in features)
+{
+    <div>
+        <i>@feature.Number</i>
+        <p>@feature.Text</p>
+     </div>>
+}
+</section> 
+
+
+@code {
+
+    AngelalgoFeatures[] features;
+
+    public class AngelalgoFeatures
+    {
+        public int Number { get; set; }
+
+        public string Text { get; set; }
+    }
+
+
+    private static readonly string[] texts = new[]
+    {
+        "Buy & Sell Signals",
+        "Auto Trendlines",
+        "Candle Color",
+        "Dashboard",
+        "Auto Support & Resistant",
+        "Take Profit Levels",
+        "Angel Cloud",
+        "Oscilator"
+    };
+
+    private static readonly int[] numbers = new[]
+    {
+        01, 02, 03, 04, 05, 06, 07, 08
+    };
+
+}

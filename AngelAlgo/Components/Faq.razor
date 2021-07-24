@@ -1,0 +1,78 @@
+﻿@page "/faq"
+
+
+<section class="faq">
+
+<h1>FAQ</h1>
+
+@foreach (var faq in faqs)
+{
+     <div>
+        <button onclick=""><i class="bi bi-plus"></i></button>
+        <h2>@faq.Questions</h2>
+        <p>@faq.Anwser</p>
+    </div>
+
+}
+
+    <div>
+        <button onclick=""><i class="bi bi-plus"></i></button>
+        <h2>How do I add Angel Algo after I purchase it ?</h2>
+        <video></video>
+    </div>
+        
+    <div>
+        <button onclick=""><i class="bi bi-plus"></i></button>
+        <h2>How do I adjust the settings?</h2>
+        <video></video>
+    </div>
+
+</section>
+
+@code { 
+    
+    AngelalgoFaq[] faqs; 
+
+    public class AngelalgoFaq
+    {
+        public string Questions { get; set; }
+
+        public string Anwser { get; set; }
+    }
+
+    private static readonly string[] questions = new[]
+    {
+        "What timeframes does Angel Algo work best on?",
+        "How accurate are the signals?",
+        "Does it repaint the signals?",
+        "When is a signal confirmed?",
+        "Does it work on Heikin Ashi Candles?",
+        "Do I need to upgrade TradingView to use It?",
+        "Will it trade for me automatically?",
+        "Can I use Angel Algo on any broker?",
+        "Can I see everything In real-time data?",
+        "Why is Study-Not-Auth Error message appearing?",
+        "Is there a free trial?",
+        "What is your cancellation policy?",
+        "How long does it take to get access after purchasing?",
+    };
+
+      private static readonly string[] anwser = new[]
+    {
+        "Angel Algo works on any timeframe and can fit any trading style.",
+        "The accuracy of the algorithm will depend upon your style of trading and the execution of the trader.",
+        "Our signals do not repaint because they come in real-time and they are confirmed when the candle closes only",
+        "A signal is confirmed only once the candle is closed.",
+        "Angel Algo works with normal candles, however, it can be useful for tr. Angel Algo works with normal candles, however, it can be useful for traders that are trying to identify longer, smoother trends using Heikin Ashi Candles",
+        "No you don’t need to upgrade TradingView, Angel Algo works 100% on the free plan of TradingView.",
+        "No, We do not have it automated this is something that you will have to do yourself",
+        "Angel Algo works on TradingView and you can trade on any brokerage you want while looking at those charts",
+        "TradingView allows you to buy real-time data for very cheap but if you don’t you will be delayed on some tickers.",
+        "This is a problem with Tradingview and you just need to take it off and re add it.",
+        "No, Free attracts non-serious people.",
+        "You can cancel your subscription anytime by logging into your account on our site or by reaching out to AngelAlgorithm@yahoo.com",
+        "After signing up, please allow us around 8 hours to give you access to Angel Algo on TradingView.",
+        "Yearly",
+    };
+
+}

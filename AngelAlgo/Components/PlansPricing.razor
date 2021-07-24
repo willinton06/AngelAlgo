@@ -1,0 +1,50 @@
+﻿@page "/planspricing"
+
+<section class="plans&Pricing">
+    
+@foreach (var plan in plansPricing)
+{
+    <div>
+        <h1>@plan.Plans</h1>
+            <ul>
+                <li>Premium Indicator's On TradingView</li>
+                <li>VIP Access To Pro Traders Chat</li>
+                <li>Real-time Bot Alerts</li>
+                <li>Real-time Alerts & Non-Repaint Signals</li>
+                <li>4/7 Support & Active Product Updates</li>
+            </ul>
+        <h1>@plan.Price</h1>
+        <h2>Full Price</h2>
+        <button>Subscribe</button>>
+    </div>
+}
+
+</section>
+
+
+@code { 
+    
+    AngelalgoPlansPricing[] plansPricing;
+
+    public class AngelalgoPlansPricing
+    {
+        public string Plans { get; set; }
+
+        public int Price { get; set; }
+    }
+
+    private static readonly string[] plans = new[]
+    {
+        "Monthly",
+        "Quarterly",
+        "Yearly"
+    };
+
+     private static readonly int[] price = new[]
+    {
+        60,
+        430,
+        2500
+    };
+
+}
